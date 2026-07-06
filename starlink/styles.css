@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+  ======VARIABLES======
+*/
+:root {
+  /*
+    Las variables son peque;os contenedores de informacion que puedes utilizar
+    para reutilizar un estilo declarandolo una sola vez y utilizar ese estilo por toda
+    la pagina
+  */
+  --text-color-main: white;
+  --size-titles: 64px;
+  --size-subtitles: 24px;
+  --size-highlights-paragraphs: 19px;
+  --size-paragraphs: 14px;
+  --gap-standard: 12px;
+  --padding-standard: 32px;
+  --color-button: #40444f60;
+}
+
+/*
+  ======GENERALES======
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color-main);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+/*
+  ======REUTILIZABLES======
+*/
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-main-center {
+  justify-content: center;
+}
+
+.flex-main-space-between {
+  justify-content: space-between;
+}
+
+.flex-secondary-center {
+  align-items: center;
+}
+
+.gap-standard {
+  gap: var(--gap-standard);
+}
+
+.padding-standard {
+  padding: var(--padding-standard);
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+/*
+  ======ESPECIFICOS======
+*/
+
+header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://starlink.com/assets-new/images/landing/field/v4_night_sky.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 0 32px;
+}
+
+nav {
+  padding: 32px 0 0 0;
+}
+
+.circular-button {
+  border-radius: 100%;
+  padding: 10px;
+  background-color: var(--color-button);
+}
+
+.button-inactive {
+  padding: 2px 8px;
+}
+
+.button-active {
+  padding: 2px 6px;
+  background-color: rgba(199, 199, 199, 0.753);
+  border-radius: 8px;
+}
+
+.buttons-menu {
+  background-color: rgba(128, 128, 128, 0.737);
+  padding: 2px;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.buttons-menu > button {
+  padding: 8px 16px;
+  font-weight: 600;
+}
+
+.link-menu {
+  font-size: var(--size-paragraphs);
+  font-weight: 600;
+}
+
+.col-content {
+  display: flex;
+}
+
+.button-hightlight{
+  background-color: white;
+  color: black;
+}
+
+.button-nohightlight{
+  background-color: rgb(67, 67, 67);
+  color: white;
+}
+
+#logo {
+  letter-spacing: 4px;
+  font-size: 16px;
+  margin-right: 16px;
+}
+
+#header-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+#column-content {
+  gap: 16px;
+  padding: 0 0 120px 120px;
+}
+
+#column-content > h1 {
+  font-size: var(--size-titles);
+  font-weight: 800;
+}
+
+#column-content > p {
+  font-size: var(--size-paragraphs);
+  color: rgb(145, 145, 145);
+  font-weight: 600;
+}
+
+#column-content > h2 {
+  font-size: var(--size-titles);
+  font-weight: 600;
+}
+
+#column-content > h2 > span {
+  font-size: var(--size-highlights-paragraphs);
+  color: rgb(145, 145, 145);
+}
+
+#column-content > div{
+  display: flex;
+  gap: 16px;
+}
+
+#column-content > div > button{
+  padding: 8px 32px;
+  font-size: var(--size-paragraphs);
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.container-toggle{
+  padding: 2px;
+  background-color: #1c1c1e;
+  border-radius: 8px;
+  display: flex;
+  margin-top: 40px;
+}
+
+.btn-toggle-active{
+  background-color: #545454;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 600;
+}
+
+.btn-toggle{
+  padding: 8px 16px;
+  font-size: var(--size-paragraphs);
+  font-weight: 600px;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+#payment-methods{
+  background-color: black;
+}
+
+.container-card{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+  padding: 10px 0px;
+  border:1px black solid;
+}
+
+.card-price{
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #121212;
+  width: 100%;
+  max-width: 550px;
+  border:1px black solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-titulo{
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.description{
+  display: block;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  line-height: 24px;
+  color: #818181;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.caracteristicas{
+  padding-left: 35px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #818181;
+}
+
+.caracteristicas li{
+  font-size: 14px;
+  color: #818181;
+  margin-bottom: 4px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.price-block{
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.etiqueta-desde{
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.price{
+display: flex;
+align-items: baseline;
+}
+
+.numero{
+  font-size: 45px;
+  font-weight: 600;
+  margin-right: 5px;
+  line-height: 1;
+  color: white;
+}
+
+.simbolo{
+  font-size: 45px;
+  font-weight: 600;
+  margin-right: 6px;
+  color: white;
+}
+
+.mes{
+  font-size: 16px;
+  font-weight: 400;
+  color: #818181;
+}
+
+.texto-referencial{
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color:#818181;
+  margin-top: 8px;
+}
+
+#info-1{
+  margin-top: 87px;
+  display: grid; 
+  grid-template-columns: 55% 45%;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  left: 50%;
+  right: 50%;
+   background-image: url(https://starlink.com/assets-new/images/landing/field/v4_lightning.webp);
+  background-size: cover;
+  background-position: center;
+  margin-left: -50vw;
+  overflow: hidden;
+}
+
+.column-content-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 40px 40px 40px 200px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: auto;
+  margin-left: 0; 
+  max-width: 800px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+
+.column-content-2 > h1 {
+  font-size: var(--size-titles);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.column-content-2 > p {
+  font-size: 18px;
+  color: #a9aaae;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 5px;
+  line-height: 1.5;
+  max-width: 100%;
+  text-align: justify;
+}
+
+.column-content-2 > div {
+  display: flex;
+  gap: 16px;
+}
+
+.column-content-2 > div > button {
+  margin-top: 10px;
+  padding: 8px 32px;
+  font-size: var(--size-paragraphs);
+  font-weight: 600;
+  border-radius: 6px;
+} 
+
+#info-2{
+  margin-top: 0px;
+  top: 0; 
+  display: grid; 
+  grid-template-columns: 55% 45%;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  background-image: url(https://starlink.com/assets-new/images/landing/field/v4_car_on_ice.webp);
+  background-size: cover;
+  background-position: center;
+  margin-left: -50vw;
+  overflow: hidden;
+}
+
+.column-content-2{
+  padding: 150px 40px 40px 200px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: auto;
+  margin-left: 0; 
+  max-width: 800px;
+}
